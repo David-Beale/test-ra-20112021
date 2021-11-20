@@ -8,7 +8,7 @@ export const FavouritesPanelContainer = styled.main`
   height: 100%;
   max-width: 320px;
   background: #fff;
-  transform: translate3d(100%, 0, 0);
+  transform: translatex(${({ open }) => (open ? 0 : 100)}%);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 `;
