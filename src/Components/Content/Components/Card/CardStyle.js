@@ -41,4 +41,9 @@ export const Button = styled.button`
   color: #fff;
   border: 0;
   background: #575757;
+  &:active,
+  &:focus,
+  &:hover {
+    background: #464646;
+  }
 `;
