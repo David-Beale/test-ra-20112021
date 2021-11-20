@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FavouritesPanelContainer = styled.main`
+export const FavouritesPanelContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
