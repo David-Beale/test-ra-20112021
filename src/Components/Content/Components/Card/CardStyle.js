@@ -5,15 +5,7 @@ export const CardContainer = styled.li`
   padding: 10px;
   width: 100%;
   @media only screen and (min-width: 480px) {
-    .comic-item {
-      width: 50%;
-    }
-    .comic-card h2 {
-      width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+    width: 50%;
   }
 `;
 export const ComicCard = styled.div`
@@ -31,6 +23,12 @@ export const Image = styled.img`
 export const Title = styled.h2`
   font-size: 18px;
   font-weight: 300;
+  @media only screen and (min-width: 480px) {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const Button = styled.button`
