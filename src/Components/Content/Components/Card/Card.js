@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
+import { selectComicById } from "../../../../redux/comics";
 import { Button, CardContainer, ComicCard, Image, Title } from "./CardStyle";
 
-export default function Card({ comic }) {
+export default function Card({ comicId }) {
+  const comic = useSelector((state) => selectComicById(state, comicId));
   return (
     <CardContainer>
       <ComicCard>

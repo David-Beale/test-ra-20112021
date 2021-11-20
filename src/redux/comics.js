@@ -26,9 +26,8 @@ const comics = createSlice({
 
 export const { addComics, setError, setLoading } = comics.actions;
 
-export const { selectAll: selectAllComics } = comicsAdapter.getSelectors(
-  (state) => state.comics
-);
+export const { selectById: selectComicById, selectIds: selectComicsIds } =
+  comicsAdapter.getSelectors((state) => state.comics);
 
 export default comics.reducer;
 

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectAllComics } from "../../redux/comics";
+import { selectComicsIds } from "../../redux/comics";
 
 import { useFetchComics } from "./Hooks/useFetchComics";
 
@@ -9,13 +9,13 @@ import Card from "./Components/Card/Card";
 
 export default function Content() {
   useFetchComics();
-  const comics = useSelector(selectAllComics);
-  console.log(comics);
+  const comicIds = useSelector(selectComicsIds);
+
   return (
     <ContentContainer>
       <ComicsList>
-        {comics.map((comic) => (
-          <Card key={comic.id} comic={comic} />
+        {comicIds.map((comicId) => (
+          <Card key={comicId} comicId={comicId} />
         ))}
       </ComicsList>
     </ContentContainer>
